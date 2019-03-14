@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta chaset="UTF-8">
+
+</head>
+<body>
+
+<div class="radio-wrapper">
+    <input type="radio"class="j_radio"id="radio1"name="radio"checked>
+    <rabel for="radio1">作成</rabel>
+</div>
+<div class="radio-wrapper">
+     <input type="radio"class="j_radio"id="radio2"name="radio">
+    <rabel for="radio2">選択</rabel>
+</div>
+
+  <canvas id="can1" width="600" height="400" style="border:blue solid 1px">
+   </canvas>
+
+<script>
+  var canvas = document.getElementById("can1");
+
+  var ctx = canvas.getContext('2d');
+
+  canvas.addEventListener('click',function (ev) {
+  var x = ev.x;
+  var y = ev.y;
+
+  ctx.beginPath();
+  ctx.fillStyle = 'rgb(255, 0, 255)';
+  ctx.arc(x,y,30, 30, 100, 0, Math.PI*2, true);
+  ctx.lineWidth = 2;
+  ctx.strokeStyle = 'rgb(255, 0, 0)';
+  ctx.stroke();
+  ctx.fill();
+
+});
+
+</script>
+
+
+    
+</body>
+</html>
